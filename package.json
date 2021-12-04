@@ -1,0 +1,19 @@
+{
+  "name": "simple_form_validation",
+  "version": "1.0.0",
+  "description": "Form Validation project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1987mat/Simple_Form_Validation.git"
+  },
+  "author": "Mat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1987mat/Simple_Form_Validation/issues"
+  },
+  "homepage": "https://github.com/1987mat/Simple_Form_Validation#readme"
+}
