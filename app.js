@@ -5,31 +5,6 @@ const passwordConfirm = document.getElementById('password_conf');
 const email = document.getElementById('mail');
 const zipCode = document.getElementById('zip_code');
 
-username.addEventListener('blur', () => {
-  if (username.validity.tooShort) {
-    showError(username, 'Username is too short.');
-  } else {
-    setSuccess(username);
-  }
-});
-
-email.addEventListener('blur', () => {
-  let emailValue = email.value.trim();
-  if (!isValidEmail(emailValue)) {
-    showError(email, 'Email is not valid.');
-  } else {
-    setSuccess(email);
-  }
-});
-
-zipCode.addEventListener('blur', () => {
-  if (zipCode.validity.patternMismatch) {
-    showError(zipCode, 'Zipcode must be 5 digits.');
-  } else {
-    setSuccess(zipCode);
-  }
-});
-
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   validateInputs();
@@ -96,3 +71,32 @@ function isValidEmail(email) {
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return regex.test(String(email).toLowerCase());
 }
+
+function autoValidate() {
+  username.addEventListener('blur', () => {
+    if (username.validity.tooShort) {
+      showError(username, 'Username is too short.');
+    } else {
+      setSuccess(username);
+    }
+  });
+
+  email.addEventListener('blur', () => {
+    let emailValue = email.value.trim();
+    if (!isValidEmail(emailValue)) {
+      showError(email, 'Email is not valid.');
+    } else {
+      setSuccess(email);
+    }
+  });
+
+  zipCode.addEventListener('blur', () => {
+    if (zipCode.validity.patternMismatch) {
+      showError(zipCode, 'Zipcode must be 5 digits.');
+    } else {
+      setSuccess(zipCode);
+    }
+  });
+}
+
+autoValidate();

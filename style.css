@@ -1,18 +1,27 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
 body {
   width: 100vw;
   height: 100vh;
-  box-sizing: border-box;
 }
 
 form {
-  font-size: 14px;
+  font-size: 13px;
   background-color: ghostwhite;
   border: 2px solid black;
-  border-radius: 5px;
+  border-radius: 4px;
   box-shadow: 2px 2px 2px black;
   width: 400px;
-  padding: 20px;
-  margin: 50px auto;
+  padding: 10px;
+  margin: 30px auto;
+}
+
+form h2 {
+  text-align: center;
+  font-size: 25px;
 }
 
 .input-controller {
@@ -27,21 +36,19 @@ form {
   height: 35px;
   border: 1px solid black;
   border-radius: 4px;
-  box-sizing: border-box;
 }
 
-button {
+.input-controller button {
   background-color: cornflowerblue;
   color: white;
-  margin-top: 2px;
-  height: 40px;
+  margin-top: 4px;
+  height: 35px;
   width: 100%;
-  border: 2px solid black;
-  border-radius: 5px;
-  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 4px;
 }
 
-button:hover {
+.input-controller button:hover {
   cursor: pointer;
 }
 

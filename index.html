@@ -5,10 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
+      rel="stylesheet"
+    />
     <title>Form Validation Project</title>
   </head>
   <body>
     <form action="#" novalidate>
+      <h2>Registration</h2>
       <div class="input-controller">
         <label for="username">Username</label>
         <input type="text" id="username" required minlength="5" />
@@ -301,7 +308,9 @@
         <input type="text" id="zip_code" required pattern="[0-9]{5}" />
         <small class="message"></small>
       </div>
-      <button type="submit">SUBMIT</button>
+      <div class="input-controller">
+        <button type="submit">Sign Up</button>
+      </div>
     </form>
 
     <script src="app.js"></script>
