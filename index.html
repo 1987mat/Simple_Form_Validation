@@ -11,17 +11,17 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
       rel="stylesheet"
     />
-    <title>Form Validation Project</title>
+    <title>Form Registration</title>
   </head>
   <body>
     <form action="#" novalidate>
       <h2>Registration</h2>
-      <div class="input-controller">
+      <div class="input-controller custom">
         <label for="username">Username</label>
         <input type="text" id="username" required minlength="5" />
         <small class="message"></small>
       </div>
-      <div class="input-controller">
+      <div class="input-controller custom">
         <label for="password">Password</label>
         <input
           type="password"
@@ -35,12 +35,17 @@
         >
         <small class="message"></small>
       </div>
-      <div class="input-controller">
+      <div class="input-controller custom">
         <label for="password_conf">Confirm Password</label>
-        <input type="password" id="password_conf" required />
+        <input
+          type="password"
+          id="password_conf"
+          required
+          pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$"
+        />
         <small class="message"></small>
       </div>
-      <div class="input-controller">
+      <div class="input-controller custom">
         <label for="mail">Email</label>
         <input type="email" id="mail" required />
         <small class="message"></small>
@@ -303,7 +308,7 @@
           <option value="ZW">Zimbabwe</option>
         </select>
       </div>
-      <div class="input-controller">
+      <div class="input-controller custom">
         <label for="zip_code">Zip Code</label>
         <input type="text" id="zip_code" required pattern="[0-9]{5}" />
         <small class="message"></small>
@@ -314,5 +319,6 @@
     </form>
 
     <script src="app.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
